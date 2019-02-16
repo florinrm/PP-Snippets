@@ -4,7 +4,7 @@
 ; - o aplicare de functii si compuneri de functii
 ; - putem spune ca se aseamana cu limbajul matematic, in sensul ca avem variabile (fie x = 4, y = 5), pe care nu putem sa le modificam ulterior
 ; - nu avem loop-uri, acestea sunt simulate de functii recursive (si functionale, vedem mai tarziu)
-; - avem instructiuni conditionale (if, cond)
+; - avem instructiuni conditionale (if, cond - tine loc de if...else if...else / switch-case)
 ; - format: (aplicare functie) aka (statement / body), ca sa faceti analogie cu Java / C
 ; - parametrii transmisi doar prin valoare
 
@@ -12,7 +12,9 @@
 (+ 2 1) ; 2 + 1
 (- 3 4) ; 3 + 4
 (* 3 4) ; 3 * 4
-(/ 5 4) ; 5 / 4 
+(/ 5 4) ; 5 / 4
+(max 420 69) ; maximul dintre 69 si 420
+(min 60 420) 
 (quotient 5 4) ; 5 / 4 cu rezultat int
 (remainder 5 4) ; returneaza modulo sau restul impartirii
 
@@ -27,8 +29,8 @@
 
 ;simbol - se aseamana cu stringurile
 (define symbol '69)
-(define symbol2 '5352352ff3q)
-(define symbol3 '4fwfw#f)
+(define symbol2 'seful-papadiilor69)
+(define symbol3 'papuci#gucci)
 
 ;compuneri
 (cons 1 2) ; avem (1 . 2)
@@ -53,6 +55,8 @@
 (list? my-list2) ; daca este lista
 (reverse my-list2) ; inversarea listei
 (length my-list2) ; lungimea listei
+(take my-list2 2) ; ia primele 2 elemente din lista
+(drop my-list2 2) ; elimina ultimele 2 elemente din lista
 
 
 ; atribuirea unei valori unei variabile
@@ -72,9 +76,9 @@
     )
 ; cond - tine loc de if ... else if ... else sau switch-case
 (cond
-  ((= var 69) "69 4 life")
-  ((= var 420) "pass de joint")
-  (else "meh"))
+  ((= var 69) "cap")
+  ((= var 420) "pajura")
+  (else "noi suntem banul si stema"))
 
 ; functii anonime - acestea sunt functiile care se folosesc in Racket
 (lambda (x) x) ; formatul: lambda (arg1 arg2 ...) (function-body, unde avem de returnat ceva)
