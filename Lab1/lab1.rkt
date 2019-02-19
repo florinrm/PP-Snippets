@@ -57,7 +57,9 @@
 (length my-list2) ; lungimea listei
 (take my-list2 2) ; ia primele 2 elemente din lista
 (drop my-list2 2) ; elimina ultimele 2 elemente din lista
+(member my-list2 2) ; verifica daca un element apartine unei liste
 
+(define (anti-cons elem L) (append L (list elem))) ; adauga un element la finalul listei
 
 ; atribuirea unei valori unei variabile
 (define var 69) ; var = 69
